@@ -13,3 +13,39 @@ The Regular and Bold face styles are taken from [Fira Code](https://github.com/t
 Download or clone this repository and install the fonts on your system.
 
 In your editor of choice set the font to `Fira Code iScript`.  Also, ensure that the current theme and syntax highlighting utilize italic.
+
+## VSCode Setup
+
+Add the following to `settings.json``
+
+    ...
+    "editor.fontFamily": "Fira Code iScript",
+    "editor.fontLigatures": true,
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "scope": [
+            "comment",
+            "keyword",
+            "storage.modifier",
+            "storage.type.class.js",
+            "storage.type.js"
+          ],
+          "settings": {
+            "fontStyle": "italic bold"
+          }
+        },
+        {
+          "scope": [
+            "keyword.control.conditional",
+            "keyword.operator"
+          ],
+          "settings": {
+            "fontStyle": ""
+          }
+        }
+      ]
+    },
+    ...
+
+
